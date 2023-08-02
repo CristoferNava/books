@@ -1,7 +1,15 @@
+import { useState } from "react";
+
+import BookEdit from "../BookEdit/BookEdit.component";
+
 const BookShow = ({ id, title, books, setBooks }) => {
-  const onClickHandler = (event) => {
-    console.log("Let's remove the book with id ", id);
-    console.log(books);
+  const [editOpen, setEditOpen] = useState(false);
+
+  const editBookHandler = () => {
+    setEditOpen(!editOpen);
+  };
+
+  const removeBookHandler = () => {
     books.delete(id);
     setBooks(new Map(books));
   };
@@ -9,7 +17,17 @@ const BookShow = ({ id, title, books, setBooks }) => {
   return (
     <div className="book-show">
       <span>{title}</span>
-      <button onClick={onClickHandler}>X</button>
+      <button onClick={editBookHandler}>Edit</button>
+      <button onClick={removeBookHandler}>X</button>
+
+      {editOpen && (
+        <BookEdit
+          id={id}
+          books={books}
+          setBooks={setBooks}
+          setEditOpen={setEditOpen}
+        />
+      )}
     </div>
   );
 };
