@@ -1,0 +1,40 @@
+.book-show {
+  display: inline-block;
+  min-height: 120px;
+  min-height: 100px;
+  border-radius: 10px;
+  border: 3px solid black;
+  background-color: bisque;
+}
+
+.book-show-options {
+  padding: 3px;
+  margin-bottom: 10px;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.edit-book {
+  text-transform: uppercase;
+  border: 1px solid black;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 100px;
+  padding: 0 12px;
+  margin-right: 4px;
+}
+
+.delete-book {
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 1px solid black;
+}
+
+.book-title {
+  font-size: 20px;
+  font-weight: normal;
+  text-align: center;
+  padding: 0;
+  margin: 0 20px;
+}

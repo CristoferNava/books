@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import "./BookCreate.styles.css";
+
 const BookCreate = ({ books, setBooks }) => {
   const [value, setValue] = useState("");
 
@@ -16,18 +18,17 @@ const BookCreate = ({ books, setBooks }) => {
   };
 
   return (
-    <div className="book-craeate">
-      <form className="book-create-form" onSubmit={onSubmitHandler}>
-        <label htmlFor="title">Title</label>
-        <input
-          id="title"
-          type="text"
-          value={value}
-          onChange={onChangeHandler}
-        />
-        <button>Submit</button>
-      </form>
-    </div>
+    <form className="book-create-form" onSubmit={onSubmitHandler}>
+      <label htmlFor="title">Add a new book</label>
+      <input
+        id="title"
+        className="book-create-form-input"
+        type="text"
+        value={value}
+        onChange={onChangeHandler}
+      />
+      <button className="book-create-form-btn">Add book</button>
+    </form>
   );
 };
 

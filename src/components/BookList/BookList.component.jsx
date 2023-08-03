@@ -1,5 +1,7 @@
 import BookShow from "../BookShow/BookShow.component";
 
+import "./BookList.styles.css";
+
 const BookList = ({ bookList, setBooks }) => {
   const books = [...bookList.values()];
   console.log(bookList);

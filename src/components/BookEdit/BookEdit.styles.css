@@ -1,0 +1,20 @@
+.book-edit-form {
+  margin-top: 15px;
+  margin-bottom: 4px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.book-edit-input {
+  border: 0.5px solid black;
+  border-radius: 8px;
+}
+
+.book-edit-save-btn {
+  width: 50%;
+  border: 1.3px solid black;
+  border-radius: 8px;
+}
